@@ -14,12 +14,12 @@ const Card = () => {
       {
         hotelList.map((property)=>{
           return (
-        <Box maxW='sm' borderWidth='1px' borderRadius='sm' overflow='hidden' key={property.id}>
-          <a href={property.webSite}><Image src={property.imageUrl} alt={property.imageAlt}  boxSize='200px'
+        <Box maxW='sm' borderWidth='5px' borderRadius='sm' overflow='hidden' key={property.id} mr="10px">
+          <a href={property.webSite}><Image src={property.imageUrl} alt={property.imageAlt}  boxSize='160px'
             objectFit='cover' borderRadius='15px'/></a>
     
           <Box p='1'>
-            <Box display='flex' alignItems='baseline'>
+            <Box display='flex' alignItems='baseline' maxW='sm'  >
               <Badge borderRadius='full' px='2' colorScheme='teal'>
                 New
               </Badge>
@@ -47,7 +47,7 @@ const Card = () => {
     
             <Box>
               {property.formattedPrice}
-              <Box as='span' color='gray.600' fontSize='sm'>
+              <Box as='span' color='gray.600' fontSize='10px'>
                 / Click info.
               </Box>
             </Box>

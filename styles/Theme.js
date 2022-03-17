@@ -11,6 +11,6 @@ export const fonts = {
   };
   
   export const breackpoints = {
-    mobile: "750px",
+    mobile: "640px",
   };
   

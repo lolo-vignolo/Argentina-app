@@ -10,7 +10,7 @@ const index = () => {
                     <Image
                         borderRadius='full'
                         boxSize='150px'
-                        src='https://bit.ly/dan-abramov'
+                        src='Lorenzo.jpg'
                         alt='Dan Abramov'
                     />
                     <h1> Lorenzo Vignolo</h1>
@@ -68,7 +68,7 @@ const index = () => {
                 flex-direction:row;
                 align-items:flex-start;
                 background-color: white;
-                height:70vh
+                height:100vh
             }
 
             .main__picture{
@@ -76,13 +76,14 @@ const index = () => {
                 flex-direction:column;
                 align-items:center;
                 justify-content: flex-start;
-                width:50vw;
+                width:60vw;
                 background-color:#C6F6D5;
                 height:100%;
                 padding-top:2rem
             }
             .ul_lenguages{
                 font-weight:500;
+                padding-left:1rem
             }
 
             h1{

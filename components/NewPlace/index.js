@@ -26,7 +26,6 @@ const index = () => {
     }
 
     const newEntry = {
-        id: new Date(),
         title,
         image,
         description
@@ -36,7 +35,7 @@ const index = () => {
 
     const handleSubmit= (e)=>{
         e.preventDefault();
-        axios.post("http://localhost:3001/notes", newEntry)
+        axios.post("/api/hello", newEntry)
         .then((response)=>console.log(response.data))
         .then(()=>router.push("/allPlaces"))
 
@@ -105,7 +104,7 @@ const index = () => {
                }
 
                form{
-                   margin-top:5rem
+                   margin-top:3rem
                }
                input{
                    display:flex;

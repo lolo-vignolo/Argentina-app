@@ -1,3 +1,16 @@
+useRouter() 
+const router = useRouter()
+const id = router.query.id
+me sirve para recuperar data que tengo en el URL, de esa forma puedo realizar un fetch específico 
+para traer la info que quiero. 
+
+Lo que debo ver es como enviar a la URL el Path al hacer click en la imagen. 
+Respuesta a lo anterior, puedo crear un Link en un elemento del Map que lleve al path/id del
+elemento. Y de esa forma ya tengo el ID puesto en el router.
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

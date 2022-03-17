@@ -1,8 +1,8 @@
-import React from 'react';
-import AllPlaces from '../components/AllPlaces';
+import AllPlaces from "../../components/AllPlaces";
 
 
-const index = () => {
+
+function index () {
     return (
         <div>
             <AllPlaces />

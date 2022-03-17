@@ -12,20 +12,26 @@ const AllPlaces = () => {
     const [listPlaces, setListPlaces] = useState([]);
     const [listPlaceDinamic, setListPlacesDinamic] = useState([])
     const [province , setProvince] = useState("")
+   
+    console.log(listPlaces);
+
+    
 
     useEffect(() => {
-        const url = "http://localhost:3001/notes"
-         axios.get(url)
-        .then((response)=>{
-            setListPlaces(response.data)
-            setListPlacesDinamic(response.data)
+        fetch('/api/hello',{
+            
+                headers : { 
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                 }
+          
         })
-       
-        .catch((err)=>console.log(err))  
+        .then((res)=>res.json())
+        .then(data=> setListPlaces(data.comments))
     }, [])
 
     const filtrar=(terminoBusqueda)=>{
-        var resultadosBusqueda=listPlaceDinamic.filter((province)=>{
+        var resultadosBusqueda = listPlaceDinamic.filter((province)=>{
           if(province.title.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
           ){
             return province;
@@ -40,7 +46,8 @@ const AllPlaces = () => {
         setProvince(e.target.value)
         filtrar(e.target.value)
     } 
-   if(!listPlaces)return null;
+
+    if(!listPlaces)return null;
 
     return (
         <>
@@ -59,25 +66,37 @@ const AllPlaces = () => {
             {province.length > 2 &&  <InputRightElement children={<CheckIcon color='green.300' />} />}
            
         </InputGroup>
-
+        
            {listPlaces.map((place)=>{
+            console.log(listPlaces);
                return(
                    
-                   <ul key={place.id}>
+                   <ul key={place._id}>
                         <li><PlaceCard
                             title={place.title}
                             picture={place.image}
                             description={place.description}
-                            address={place.address}
+                            id = {place._id}
                          /></li>
                    </ul>
                )
            })}
         </section>
-        <style jsx>{`       
+        <style jsx>{`
+
+            section{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center
+            }       
             input{
                 position:relative
 
+            }
+
+            ul{
+                list-style:none 
             }
         `}</style>
         </>

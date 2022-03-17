@@ -4,13 +4,13 @@ import React from 'react';
 
 
 
-const PlaceCard = ({title, picture , description, address}) => {
+const PlaceCard = ({title, picture , description, address,id}) => {
     return (
         <>
        
             <div className='main_div'>
             
-                <div bg='tomato'>
+                <div className='div__img'>
                 <Image 
                     borderRadius='15px' 
                     src={picture}
@@ -35,10 +35,15 @@ const PlaceCard = ({title, picture , description, address}) => {
                     </AspectRatio>
                     </div>
 
-                </div>
-
+                    <div className="div__more">
+                        <Link href= {`allPlaces/${id}`} ><a>see more</a></Link>
+                    </div>
                 
+
+                </div>
+              
             </div>
+            
            
 
             <style jsx>
@@ -47,23 +52,38 @@ const PlaceCard = ({title, picture , description, address}) => {
                     display:flex;
                     align-items:center;
                     flex-direction:row;
+                    justify-content:center;
                     border:solid;
                     border-radius:10px;
                     border-color:#C6F6D5;
                     margin:3rem;
                     padding:1rem;
                     background:white;
+                    height:30rem;
+                    width: 28rem
                    
                 }
 
+                .div__img{
+                    
+                    display:flex;
+                    
+                    padding-top:0;
+                
+
+                }
+
                 .box__div{
-                    height:17rem;
+                    height:27rem;
                     width:20rem;
                     display:flex;
                     flex-direction:column;
-                    justify-content:space-between;
+                    justify-content:center;
                     padding-top:0;
-                    padding-left:1rem
+                    padding-left:1rem;
+                    margin-top:1rem;
+                    align-items:space-between;
+                    
 
                     
                 }
@@ -74,12 +94,25 @@ const PlaceCard = ({title, picture , description, address}) => {
                     justify-content:center;
                 }
                 .div__map{
-                    margin-left:3rem;   
+                    margin:1.5rem;   
                 }
 
                 p{
                     font-size: 15px;
                 }
+
+                .div__more{
+                    color:#E6FFFA;
+                    align-self:center;
+                    background-color:#2C7A7B;
+                    width:5rem;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    border-radius:15px
+                    
+                }
+
             `}
             </style>
             

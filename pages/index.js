@@ -39,7 +39,7 @@ export default function Home() {
     }
 
     h1{
-      font-size:2rem;
+      font-size:1.8rem;
       font-family:font-family: 'Lobster', cursive;
     }
 
@@ -56,9 +56,9 @@ export default function Home() {
     .div_footer{
       display:flex;
       flex-direction:row;
-      justify-content:space-between;
-      margin-left:2rem;
-      margin-right:2rem;
+      justify-content:center;
+      margin-left:1rem;
+      margin-right:1rem;
       
     }
     

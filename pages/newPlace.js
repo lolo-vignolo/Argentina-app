@@ -13,7 +13,7 @@ const newPlace = () => {
                     justify-content:center;
                     align-items:center;
                     width:100%;
-                    height:80%
+                    height:90%
                 }
             `}</style>
         </>
