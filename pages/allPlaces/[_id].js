@@ -1,9 +1,9 @@
 import { ArrowBackIcon, StarIcon } from "@chakra-ui/icons";
 import { Box, Button, Image, Text } from "@chakra-ui/react";
-import axios from "axios";
+
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from 'react';
-import Starts from "./Starts";
+
 
 
 function ScoopePage () {
@@ -66,7 +66,7 @@ function ScoopePage () {
                     alt={place.title}
                     /> 
         <div>
-        <Starts star={star} />
+        
         <br />
         <Button colorScheme='teal' variant='outline' size='xs' onClick={handleStar}>Add a - <StarIcon /> </Button>
        
