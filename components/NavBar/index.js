@@ -8,7 +8,7 @@ const NavBar = () => {
         <header>
         <div>
         <Link href="/">
-            <a><h1>Home page</h1></a>
+            <a><h1>Home 🏠</h1></a>
         </Link>
         </div>
         <div>
@@ -38,13 +38,23 @@ const NavBar = () => {
        
         }
         h1{
-            font-size:1.5rem;
+            font-size:1.2rem;
             font-weight:bold;
+            
         }
 
         div{
-            margin-left: 3rem;
-            margin-right:3rem
+            margin-left: 2rem;
+            margin-right:2rem
+        }
+
+        @media (min-width:640px) {
+
+            h1{
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+   
         }
 
         `}

@@ -5,6 +5,9 @@ import React from 'react';
 
 
 const PlaceCard = ({title, picture , description, address,id}) => {
+
+
+
     return (
         <>
        
@@ -24,15 +27,6 @@ const PlaceCard = ({title, picture , description, address,id}) => {
                     <div className='content_div'>
                         <Text fontSize='2xl'>{title} 🧐 </Text>
                         <p>{description}</p>
-                    </div>
-
-                    <div className='div__map'>
-                    <AspectRatio ratio={2.9/0.8} mb="3px">
-                        <iframe
-                            src= {address?address:""}
-                            alt="bandera.png"
-                        />
-                    </AspectRatio>
                     </div>
 
                     <div className="div__more">
@@ -56,21 +50,17 @@ const PlaceCard = ({title, picture , description, address,id}) => {
                     border:solid;
                     border-radius:10px;
                     border-color:#C6F6D5;
-                    margin:3rem;
+                    margin-top:3rem;
                     padding:1rem;
                     background:white;
-                    height:30rem;
-                    width: 28rem
+                    height:25rem;
+                    width: 20rem;
                    
                 }
 
-                .div__img{
-                    
+                .div__img{     
                     display:flex;
-                    
                     padding-top:0;
-                
-
                 }
 
                 .box__div{
@@ -92,13 +82,15 @@ const PlaceCard = ({title, picture , description, address,id}) => {
                     flex-direction:column;
                     align-items:center;
                     justify-content:center;
-                }
-                .div__map{
-                    margin:1.5rem;   
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 p{
                     font-size: 15px;
+                    margin-top:0.5rem;
+                    margin-bottom:0.5rem;
+                    height:12rem
                 }
 
                 .div__more{
@@ -109,8 +101,21 @@ const PlaceCard = ({title, picture , description, address,id}) => {
                     display:flex;
                     justify-content:center;
                     align-items:center;
-                    border-radius:15px
+                    border-radius:15px;
+                    margin-top:1rem!important
                     
+                }
+
+                
+                @media (min-width:640px) {
+
+                    .main_div{
+                    
+                    height:25rem;
+                    width: 30rem;
+                   
+                    }
+
                 }
 
             `}

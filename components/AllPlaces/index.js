@@ -1,6 +1,5 @@
 import { CheckIcon, SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement, InputRightElement } from '@chakra-ui/react';
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import PlaceCard from './PlaceCard';
 
@@ -13,7 +12,7 @@ const AllPlaces = () => {
     const [listPlaceDinamic, setListPlacesDinamic] = useState([])
     const [province , setProvince] = useState("")
    
-    console.log(listPlaces);
+   
 
     
 
@@ -27,7 +26,11 @@ const AllPlaces = () => {
           
         })
         .then((res)=>res.json())
-        .then(data=> setListPlaces(data.comments))
+        .then(data=>{
+            setListPlacesDinamic(data.comments)
+            setListPlaces(data.comments)
+        })
+       
     }, [])
 
     const filtrar=(terminoBusqueda)=>{
@@ -68,7 +71,7 @@ const AllPlaces = () => {
         </InputGroup>
         
            {listPlaces.map((place)=>{
-            console.log(listPlaces);
+          
                return(
                    
                    <ul key={place._id}>

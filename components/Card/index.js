@@ -23,16 +23,7 @@ const Card = () => {
               <Badge borderRadius='full' px='2' colorScheme='teal'>
                 New
               </Badge>
-              <Box
-                color='gray.500'
-                fontWeight='semibold'
-                letterSpacing='wide'
-                fontSize='xs'
-                textTransform='uppercase'
-                ml='2'
-              >
-                {property.beds} beds &bull; {property.baths} baths
-              </Box>
+              
             </Box>
     
             <Box
@@ -52,7 +43,7 @@ const Card = () => {
               </Box>
             </Box>
     
-            <Box display='flex' mt='2' alignItems='center'>
+            <Box display='flex' mt='2' alignItems='center' fontSize='sm' >
               {Array(5)
                 .fill('')
                 .map((_, i) => (
@@ -61,10 +52,11 @@ const Card = () => {
                     color={i < property.rating ? 'teal.500' : 'gray.300'}
                   />
                 ))}
-              <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                </Box>  
+              <Box as='span'  color='gray.600' fontSize='sm'>
                 {property.reviewCount} reviews
               </Box>
-            </Box>
+            
           </Box>
         </Box>
       )

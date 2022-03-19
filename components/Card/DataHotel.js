@@ -14,7 +14,7 @@ export const Hotels = [
   },
   { 
     id:2,
-    imageUrl: 'https://exp.cdn-hotels.com/hotels/2000000/1340000/1339900/1339890/14e60a20_y.jpg?impolicy=fcrop&w=500&h=333&q=high',
+    imageUrl: 'https://images.trvl-media.com/hotels/2000000/1340000/1339900/1339890/4fbddf79.jpg?impolicy=fcrop&w=670&h=385&p=1&q=medium',
     imageAlt: 'Rear view of modern home with pool',
     beds: 3,
     baths: 2,

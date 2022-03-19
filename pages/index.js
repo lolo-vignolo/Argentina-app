@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <div className='div__presentation'>
         <h1>Welcome to a Trip around Argentina 🤩</h1>
-        <p>Chose the province and take a look to the most beautiful places that this site offers </p>
+        <p>Chose the province and take a look to the most beautiful places that this site offers. </p>
       </div>
       </section> 
       <section>
@@ -67,19 +67,3 @@ export default function Home() {
   )
 }
 
-  {/* .main__div{
-      border:solid;
-      display: flex;
-      width:30rem;
-      height:12rem;
-      flex-direction:column;
-      justify-content:center;
-      margin:3rem;
-      background:#234E52;
-    }
-
-    .modal_class{
-      display:flex;
-      align-items: center;
-      justify-content:center;
-    } */}

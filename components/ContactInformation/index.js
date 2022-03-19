@@ -1,36 +1,50 @@
 import { Image } from '@chakra-ui/react';
 import React from 'react';
 
+
 const index = () => {
+
+    const img1 = "site/js.png"
+    const img2 = "site/next.png"
+    const img3 = "site/ts.png"
+    const img4 = "site/node.png"
+    const img5 = "site/react.png"
+    const img6 = "site/firebase.png"
+    const img7 = "site/html.png"
+    const img8 = "site/css.png"
+    console.log(img1);
+    
     return (
         <>
         <section>
-            <main className='main__picture'>
+            <div className='main__picture'>
                 <div>   
                     <Image
                         borderRadius='full'
-                        boxSize='150px'
+                        boxSize='130px'
                         src='Lorenzo.jpg'
                         alt='Dan Abramov'
                     />
                     <h1> Lorenzo Vignolo</h1>
                     <h2>Web Developer</h2>
                 </div>
-                <div>
-                    <ul className='ul_lenguages'>
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Firebase</li>
-                        <li>Style components</li>
-                        <li>English C1</li>
-                        <li> and more 😉</li>
-                    </ul>
+                <div className='logos'>
+                    <div className='logo-column'>
+                    <Image src={img1} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                    <Image src={img2} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                    <Image src={img3} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                    <Image src={img7} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                </div> 
+                <div className='logo-column'>    
+                    <Image src={img4} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                    <Image src={img5} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                    <Image src={img6} alt="img" width = {30} height = {30} ml={1} mr={1} />
+                    <Image src={img8} alt="img" width = {30} height = {30} ml={1} mr={1}/>
+                </div>
+                  
                 </div>
                 
-            </main>
+            </div>
             <main className='main__courses'>
                 <header>
                     Programming Education
@@ -65,25 +79,35 @@ const index = () => {
 
             section{
                 display:flex;
-                flex-direction:row;
+                flex-direction:column;
                 align-items:flex-start;
-                background-color: white;
-                height:100vh
+                background-color: white;   
             }
 
             .main__picture{
                 display:flex;
                 flex-direction:column;
                 align-items:center;
-                justify-content: flex-start;
-                width:60vw;
+                justify-content: center;
                 background-color:#C6F6D5;
-                height:100%;
-                padding-top:2rem
+                padding-top:2rem;
+                width:100%
+               
             }
-            .ul_lenguages{
-                font-weight:500;
-                padding-left:1rem
+
+            .logos{
+                display: flex;
+                justify-content:center;
+            }
+
+            .logo-column{
+                display: flex;
+                justify-content:center;
+                align-items:space-between;
+                flex-direction:row;
+                margin-bottom:1rem; 
+                margin-top:1rem; 
+            
             }
 
             h1{
@@ -92,7 +116,7 @@ const index = () => {
                 font-weight: 900;
             }
             h2{
-                margin-top:1.5rem;
+                margin-top:0.5rem;
                 font-family: Lobster, cursive;
                 font-weight: 800;
             }
@@ -121,6 +145,7 @@ const index = () => {
                 padding-top: 4rem;
                 font-weight:500;
                 font-family: Lobster, cursive;
+                margin-bottom:2rem
             }
 
 

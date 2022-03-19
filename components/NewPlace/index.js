@@ -52,7 +52,7 @@ const index = () => {
                         <input 
                             onChange = {handleTitle}
                             value = {title}
-                            placeholder = 'Place' 
+                            placeholder = ' Place' 
                             />
                     </div>
                     <div className='div_picture'>
@@ -60,7 +60,7 @@ const index = () => {
                         <input 
                             value={image}
                             onChange={handleUrl} 
-                            placeholder='Picture URL' 
+                            placeholder=' Picture URL' 
                             type="url"
                             required
                              />  
@@ -70,7 +70,7 @@ const index = () => {
                         <textarea 
                             value = {description}
                             onChange={HandleDescription} 
-                            placeholder='Give us some interesting information...'   
+                            placeholder=' Add a description...'   
                             row="5" 
                             maxLength="300"
                             required
@@ -98,13 +98,14 @@ const index = () => {
                    display:flex;
                    justify-content:center;
                    background-color:#F0FFF4;
-                   width: 70%;
-                   height:80%;
+                   width: 90%;
+                   height:70%;
                    border-radius:15px;
                }
 
                form{
-                   margin-top:3rem
+                   margin-top:3rem;
+                   width: 85%;
                }
                input{
                    display:flex;
@@ -129,8 +130,10 @@ const index = () => {
                }
 
                h3{
-                   font-size:1.5rem;
+                   font-size:1rem;
                    font-family: Lobster , cursive;
+                   margin-top:0.5rem;
+                   margin-bottom:0.5rem
 
                }
                .div_title{
@@ -139,6 +142,14 @@ const index = () => {
                    width:100%;
                    height:5rem
                }
+
+               @media (min-width: 680px) {
+                h3{
+                   font-size:1.5rem;
+               }
+                
+                }
+            
 
             `}</style>
         </>

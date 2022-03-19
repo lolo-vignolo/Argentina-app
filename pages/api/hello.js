@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   
   try {
     client = await MongoClient.connect(
-      'mongodb+srv://Portfolio-Lorenzo:CKu6GRDw1ZILNkxR@cluster0.khqxu.mongodb.net/notes?retryWrites=true&w=majority',
+      process.env.DB_CNN,
       { useNewUrlParser: true, useUnifiedTopology: true });
   } catch (error) {
     res.status(500).json({ message: 'Could not connect to database.' }); /// este mensage lo agarro luego desde el fron para mostrarlo
@@ -76,6 +76,7 @@ export default async function handler(req, res) {
  }
 
  client.close()
+
 
 }
 

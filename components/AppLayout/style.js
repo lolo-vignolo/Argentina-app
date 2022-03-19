@@ -17,9 +17,9 @@ export default css`
     display: flex;
     flex-direction: column;
    
-    height: 100%;
-    width: 100%;
-    position: relative;
+    height: 90%;
+    width: 90%;
+    position: absolute;
     overflow-y: auto;
   }
 

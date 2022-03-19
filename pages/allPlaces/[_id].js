@@ -9,24 +9,36 @@ import Starts from "./Starts";
 function ScoopePage () {
 
     const router = useRouter()
-    const id = router.query.id
+    const id = router.query._id
     
     const [star , setStar] = useState(1)
 
    
 
-    const [place, setPlaces] = useState([]);
+    const [placeSelected, setPlaces] = useState([]);
+    console.log(placeSelected);
     
     useEffect(() => {
-        const url = `http://localhost:3001/notes/${id}`
-         axios.get(url)
-        .then((response)=>{
-            setPlaces(response.data)
+        fetch(`/api/hello`,{
             
+                headers : { 
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                 }
+          
+        })
+        .then((res)=>res.json())
+        .then(data=>{
+            setPlaces(data.comments)
         })
        
-        .catch((err)=>console.log(err))  
     }, [])
+
+
+    const  placeArray = placeSelected.filter(p => p._id === id)
+
+    const[place] = placeArray
+   
 
     const handleClick = () => {
         router.push("/allPlaces")
@@ -36,8 +48,6 @@ function ScoopePage () {
         setStar(star + 1)
     }
 
-    console.log(star);
-   
 
    if(!place) return null;
     
@@ -95,3 +105,4 @@ function ScoopePage () {
 }
 
 export default ScoopePage
+
