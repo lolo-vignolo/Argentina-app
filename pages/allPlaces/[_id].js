@@ -11,7 +11,6 @@ function ScoopePage () {
     const router = useRouter()
     const id = router.query._id
     
-    const [star , setStar] = useState(1)
 
    
 
@@ -44,9 +43,7 @@ function ScoopePage () {
         router.push("/allPlaces")
     }
 
-    const handleStar = () => {
-        setStar(star + 1)
-    }
+ 
 
 
    if(!place) return null;
@@ -68,7 +65,7 @@ function ScoopePage () {
         <div>
         
         <br />
-        <Button colorScheme='teal' variant='outline' size='xs' onClick={handleStar}>Add a - <StarIcon /> </Button>
+        
        
         </div>
        
