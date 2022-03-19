@@ -1,4 +1,4 @@
-import { ArrowBackIcon, StarIcon } from "@chakra-ui/icons";
+import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 
 import { useRouter } from "next/router"
