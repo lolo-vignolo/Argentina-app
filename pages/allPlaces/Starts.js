@@ -1,12 +1,12 @@
-import React from 'react';
+
 
 const Starts = ({star}) => {
 
 
     const stars = {
-        one : "⭐_ _ _",
-        two: "⭐⭐_ _",
-        three:"⭐⭐⭐_",
+        one : "⭐",
+        two: "⭐⭐",
+        three:"⭐⭐⭐",
         four:"⭐⭐⭐⭐"
     }
     if (star <= 5){

@@ -8,7 +8,7 @@ const Card = () => {
 
   const [hotelList, setfirst] = useState(Hotels)
 
-  console.log(hotelList);
+ 
   return (
     <>
       {

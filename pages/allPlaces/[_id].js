@@ -16,7 +16,7 @@ function ScoopePage () {
    
 
     const [placeSelected, setPlaces] = useState([]);
-    console.log(placeSelected);
+  
     
     useEffect(() => {
         fetch(`/api/hello`,{
