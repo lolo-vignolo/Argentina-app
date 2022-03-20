@@ -77,7 +77,7 @@ function ScoopePage () {
             <Text fontSize='1xl'>{place.description}</Text>  
             
         </Box>
-        <Box  mt="2rem" align="center">
+        <Box  mt="2rem" align="center" mb="2rem">
             
             <Button onClick={handleClick}  leftIcon={<ArrowBackIcon />} colorScheme='teal' variant='solid' mb="15px">
                 Go Back!

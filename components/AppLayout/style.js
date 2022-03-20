@@ -11,13 +11,13 @@ export default css`
   }
 
   main {
-    border-radius: 5px;
+    border-radius: 15px;
     background: #E2E8F0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     height: 90%;
-    width: 85%;
+    width: 90%;
     position:absolute;
     overflow-y: auto;
   }
