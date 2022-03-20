@@ -6,6 +6,10 @@ export default css`
     display: grid;
     height: 100vh;
     place-items: center;
+    justify-content:center;
+    align-itmes:center
+   
+
   }
 
   main {

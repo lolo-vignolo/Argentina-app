@@ -130,7 +130,7 @@ const index = () => {
 
                h3{
                    font-size:1rem;
-                   font-family: Lobster , cursive;
+                   font-family:"Goudy Bookletter 1911", sans-serif;;
                    margin-top:0.5rem;
                    margin-bottom:0.5rem
 
@@ -142,7 +142,7 @@ const index = () => {
                    height:5rem
                }
 
-               @media (min-width: 680px) {
+               @media (min-width: 640px) {
                 h3{
                    font-size:1.5rem;
                }
