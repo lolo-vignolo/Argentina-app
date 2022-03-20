@@ -19,10 +19,10 @@ export default function Home() {
         <p>Chose the province and take a look to the most beautiful places that this site offers. </p>
       </div>
       </section> 
-      <section>
+      <section  className='sec_footer'>
         <div className='div_footer'>
           <Card />
-        </div> 
+        </div>
       </section>
    
    
@@ -32,10 +32,13 @@ export default function Home() {
     <style jsx>{`
 
     .section_1{
-       align-items:center;
        display:flex;
+       justify-content:center;
+       align-items:center;
        flex-direction:column;
-       margin:2rem;
+       margin-left:1rem;
+       margin-right:1rem;
+       margin-bottom:2rem  
     }
 
     h1{
@@ -45,8 +48,9 @@ export default function Home() {
 
     .div__map{
         width:70%;
-        height:auto
-
+        height:auto;
+        margin-top:2rem;
+    
     }
 
     .div__presentation{
@@ -56,12 +60,16 @@ export default function Home() {
     .div_footer{
       display:flex;
       flex-direction:row;
+      align-items:space-between;
       justify-content:center;
-      margin-left:1rem;
-      margin-right:1rem;
-      
     }
-    
+
+    .sec_footer{
+      display:flex;
+      align-items:center;
+      justify-content:center
+    }
+
     `}</style>
     </>
   )

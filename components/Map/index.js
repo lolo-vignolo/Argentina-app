@@ -5,12 +5,12 @@ const Map = () => {
     return (
         <>
         <div>
-            <Image width={"600px"} height={"350px"} src="/trip.png" />
+            <Image className='img' width={"700px"} height={"440px"} src="/trip.png" />
         </div>
 
         <style jsx>{`
-            img{
-                border-radius: 15px;
+            .img{
+                border-radius: 15px !   important ;
             }
     
         `}

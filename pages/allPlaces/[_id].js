@@ -87,6 +87,8 @@ function ScoopePage () {
         </section>
 
         <style jsx>{`
+
+      
         
         
         `}</style>

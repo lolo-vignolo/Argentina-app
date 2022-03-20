@@ -17,8 +17,8 @@ const PlaceCard = ({title, picture , description, address,id}) => {
                 <Image 
                     borderRadius='15px' 
                     src={picture}
-                    alt='Dan Abramov'
-                    boxSize='280px'
+                    alt={title}
+                    boxSize='150px'
                     objectFit='cover' 
                     />
                 </div>

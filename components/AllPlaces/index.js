@@ -91,16 +91,22 @@ const AllPlaces = () => {
                 display:flex;
                 flex-direction:column;
                 align-items:center;
-                justify-content:center
-            }       
-            input{
-                position:relative
-
+                justify-content:center;
+               
+                
             }
 
+            input{
+                position:relative
+            }       
             ul{
                 list-style:none 
             }
+
+            @media (min-width: 640px){
+                
+           }
+            
         `}</style>
         </>
     );

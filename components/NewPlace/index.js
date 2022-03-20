@@ -98,13 +98,12 @@ const index = () => {
                    display:flex;
                    justify-content:center;
                    background-color:#F0FFF4;
-                   width: 90%;
-                   height:70%;
+                   width: 80%;
+                   height:60%;
                    border-radius:15px;
                }
 
                form{
-                   margin-top:3rem;
                    width: 85%;
                }
                input{

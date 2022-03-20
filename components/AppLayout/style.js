@@ -6,8 +6,6 @@ export default css`
     display: grid;
     height: 100vh;
     place-items: center;
-   
-   
   }
 
   main {
@@ -16,10 +14,9 @@ export default css`
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-   
     height: 90%;
     width: 90%;
-    position: absolute;
+    position:absolute;
     overflow-y: auto;
   }
 
