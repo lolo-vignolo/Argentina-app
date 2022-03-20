@@ -72,7 +72,7 @@ const index = () => {
                             onChange={HandleDescription} 
                             placeholder=' Add a description...'   
                             row="5" 
-                            maxLength="300"
+                            maxLength="600"
                             required
                             />                 
                     </div>  

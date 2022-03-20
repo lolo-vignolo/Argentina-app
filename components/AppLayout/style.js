@@ -3,13 +3,11 @@ import { breackpoints, colors, fonts } from "../../styles/Theme";
 
 export default css`
   div {
-    display: grid;
+    display: flex;
     height: 100vh;
     place-items: center;
     justify-content:center;
     align-itmes:center
-   
-
   }
 
   main {
@@ -19,7 +17,7 @@ export default css`
     display: flex;
     flex-direction: column;
     height: 90%;
-    width: 90%;
+    width: 85%;
     position:absolute;
     overflow-y: auto;
   }
@@ -34,7 +32,7 @@ export default css`
 
   
   main::-webkit-scrollbar {
-                width: 12px;               /* width of the entire scrollbar */
+                width: 8px;               /* width of the entire scrollbar */
                 }
 
                 main::-webkit-scrollbar-track {
