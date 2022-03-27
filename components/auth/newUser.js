@@ -18,8 +18,6 @@ async function newUser ( email, password) {
 
     if(!response.ok){
         throw Error(data.message || "Something went wrong")
-    }else{
-        router.replace("/home")
     }
     return data;
 }
