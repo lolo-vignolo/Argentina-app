@@ -75,7 +75,6 @@ const AuthForm = () => {
             try{
                const result = await newUser(email, password)
                setStatus("succes");
-               router.replace("/home")
                console.log(result);
 
             }catch(err){
@@ -128,7 +127,7 @@ const AuthForm = () => {
             {status === "succes" &&
             <Alert status='success'>
                 <AlertIcon />
-                New account was created
+                New account was created, now login 😉
                 </Alert>                    
             } 
             {status === "loginSucces" &&

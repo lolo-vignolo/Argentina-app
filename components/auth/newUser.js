@@ -1,9 +1,8 @@
-import { useRouter } from "next/router";
 
 
 async function newUser ( email, password) {
 
-    const router = useRouter()
+  
     
     const response = await fetch("/api/auth/signup", {
         method:"POST",
