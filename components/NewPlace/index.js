@@ -37,10 +37,10 @@ const index = () => {
         e.preventDefault();
         axios.post("/api/hello", newEntry)
         .then((response)=>console.log(response.data))
-        .then(()=>router.push("/allPlaces"))
-
-        
+        .then(()=>router.push("/allPlaces"))   
       console.log(e);
+
+      
     }
     return (
 
@@ -77,7 +77,7 @@ const index = () => {
                             />                 
                     </div>  
                     <Stack direction='row' spacing={4} mt={6}>
-                        <Button onClick={()=>router.push("/")}  colorScheme='teal' variant='solid'>
+                        <Button onClick={()=>router.push("/home")}  colorScheme='teal' variant='solid'>
                            Home
                         </Button>
                         <Button
@@ -97,14 +97,16 @@ const index = () => {
                section{
                    display:flex;
                    justify-content:center;
-                   background-color:#F0FFF4;
+                   background-color:#9AE6B4;
                    width: 80%;
-                   height:60%;
+                   height:80%;
+                   max-height:30rem;
                    border-radius:15px;
                }
 
                form{
                    width: 85%;
+                   height:auto
                }
                input{
                    display:flex;
@@ -143,6 +145,12 @@ const index = () => {
                }
 
                @media (min-width: 640px) {
+
+                section{
+                   width:85%;
+                   height:100%;
+                   border-radius:15px;
+               }
                 h3{
                    font-size:1.5rem;
                }

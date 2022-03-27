@@ -5,7 +5,7 @@ const Map = () => {
     return (
         <>
         <div>
-            <Image className='img' width={"700px"} height={"440px"} src="/trip.png" />
+            <Image className='img' width={"700px"} height={"440px"} src="/trip.jpg" />
         </div>
 
         <style jsx>{`

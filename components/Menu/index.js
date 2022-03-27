@@ -22,7 +22,7 @@ const MyMenu = () => {
             <Link href='/allPlaces'><a><MenuItem color="black">Places</MenuItem></a></Link>
             <Link href='/newPlace'><a><MenuItem color="black">Add a place </MenuItem></a></Link>
             <Link href='/contactInformation'><a><MenuItem color="black">Contact me</MenuItem></a></Link>
-            <Link href='/'><a><MenuItem color="black">Home</MenuItem></a></Link>
+            <Link href='/home'><a><MenuItem color="black">Home</MenuItem></a></Link>
             </MenuGroup>
         </MenuList>
         </Menu>  

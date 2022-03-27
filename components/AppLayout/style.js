@@ -12,7 +12,7 @@ export default css`
 
   main {
     border-radius: 15px;
-    background: #E2E8F0;
+    background:#E2E8F0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;

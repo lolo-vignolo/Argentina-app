@@ -126,13 +126,15 @@ const index = () => {
             .main__courses{
                 display:flex;
                 flex-direction:column;
-                margin-left:2rem 
+                margin-left:2rem;
+                height:80%
             }
 
             .div__certificates{
                 display:flex;
                 flex-direction:column;
-                width:90%
+                width:90%;
+                
             }
 
             header{

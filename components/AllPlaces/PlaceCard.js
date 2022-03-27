@@ -1,11 +1,19 @@
 import { Text, Image, AspectRatio } from '@chakra-ui/react';
+import axios from 'axios';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
+
 
 
 
 const PlaceCard = ({title, picture , description, address,id}) => {
 
+
+
+    // const handleDelete = () =>{
+    //     axios.delete(`/api/hello/${id}`, {id})
+    //     .then((response)=>console.log(response.data))
+    // } 
 
 
     return (
@@ -30,7 +38,8 @@ const PlaceCard = ({title, picture , description, address,id}) => {
                     </div>
 
                     <div className="div__more">
-                        <Link href= {`allPlaces/${id}`} ><a>see more</a></Link>
+                        <div><Link href= {`allPlaces/${id}`} ><a>see more</a></Link></div>
+                        {/* <div><button onClick = {handleDelete}>Delete</button></div> */}
                     </div>
                 
 
@@ -95,11 +104,11 @@ const PlaceCard = ({title, picture , description, address,id}) => {
 
                 .div__more{
                     color:#E6FFFA;
-                    align-self:center;
+                   
                     background-color:#2C7A7B;
-                    width:5rem;
+                    width:10rem;
                     display:flex;
-                    justify-content:center;
+                    justify-content:space-between;
                     align-items:center;
                     border-radius:15px;
                     margin-top:1rem!important

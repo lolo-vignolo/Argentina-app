@@ -16,7 +16,7 @@ const Card = () => {
           return (
         
         <Box maxW='md' borderWidth='5px' borderRadius='sm' overflow='hidden' key={property.id}>
-          <a href={property.webSite}><Image src={property.imageUrl} alt={property.imageAlt}  boxSize='160px'
+          <a href={property.webSite}><Image src={property.imageUrl} alt={property.imageAlt}  boxSize='168px'
             objectFit='cover' borderRadius='15px'/></a>
     
           <Box p='1'>
@@ -41,7 +41,7 @@ const Card = () => {
               {property.formattedPrice}
             </Box>
             <Box as='span' color='gray.600' fontSize='10px'>
-                / Click info.
+                
               </Box>
     
             <Box display='flex' mt='2' alignItems='center' fontSize='sm' >

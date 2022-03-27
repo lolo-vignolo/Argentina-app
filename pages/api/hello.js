@@ -77,8 +77,25 @@ export default async function handler(req, res) {
 
  client.close()
 
+//  if (req.method === "DELETE"){
+
+//   const { id } = req.body;
+  
+//   const deleteCar = await db 
+//   .collection("messages")
+//   .find()
+//   .reomove("_id"=== id)
+//   console.log(deleteCar);
+ 
+//   client.close()
+ //}
 
 }
+
+
+
+
+    
 
 
 

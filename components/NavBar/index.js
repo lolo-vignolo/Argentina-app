@@ -1,18 +1,38 @@
+import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import MyMenu from "../Menu";
 
 const NavBar = () => {
+    const { data: session, status } = useSession();
+
+    console.log(session);
+    const handleLogout = () =>{
+      
+        signOut();
+      }
+
     return (
         <>
 
         <header>
-        <div>
-        <Link href="/">
+        <div className="div-left">
+        {!session && 
+        <h1>Welcome</h1>
+        }
+        {session && 
+        <Link href="/home">
             <a><h1>Home 🏠</h1></a>
         </Link>
+        }
         </div>
-        <div>
+        <div className="div-right">
+        {session && 
+        <button onClick={handleLogout}>Logout</button>
+        }
+        {session && 
         <MyMenu />
+        }
+        
         </div>
         
         </header>
@@ -33,26 +53,42 @@ const NavBar = () => {
             top: 0;
             width: 100%;
             z-index:3;
-            
-            
-       
         }
         h1{
-            font-size:1.2rem;
+            font-size:1.1rem;
             font-weight:bold;
             
         }
 
-        div{
+        .div-left{
             margin-left: 2rem;
             margin-right:2rem
         }
+        .div-right{
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+        }
 
-        @media (min-width:640px) {
+        button{
+            margin-right:1rem;
+            color:#E53E3E;
+            font-weight:500;
+            font-size:1rem
+        }
+
+
+        @media (min-width:500px) {
 
             h1{
-            font-size:1.5rem;
+            font-size:2rem;
             font-weight:bold;
+        }
+
+        button{
+            margin-right:1rem;
+            font-weight:600;
+            font-size:1.4rem
         }
    
         }

@@ -1,14 +1,12 @@
 import { getSession } from 'next-auth/react';
-import ContactInformation from '../components/ContactInformation';
+import Home from "../components/home/Home";
 
 
-const contactInformation = () => {
-    return (
-        <div>
-            <ContactInformation />
-        </div>
-    );
-};
+function MainScreen() {
+
+    return <Home />
+}
+
 
 export async function getServerSideProps(context){
     const session = await getSession({req : context.req})
@@ -31,4 +29,4 @@ export async function getServerSideProps(context){
     }
 }
 
-export default contactInformation;
+export default MainScreen;
