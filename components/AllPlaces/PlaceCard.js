@@ -104,11 +104,10 @@ const PlaceCard = ({title, picture , description, address,id}) => {
 
                 .div__more{
                     color:#E6FFFA;
-                   
                     background-color:#2C7A7B;
-                    width:10rem;
+                    width:6rem;
                     display:flex;
-                    justify-content:space-between;
+                    justify-content:center;
                     align-items:center;
                     border-radius:15px;
                     margin-top:1rem!important

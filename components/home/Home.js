@@ -78,7 +78,7 @@ export default function Home() {
     font-size:2.5rem;
     font-weight:800;
     margin-left:2rem;
-    margin-bottom:2rem;
+    margin-bottom:1.5rem;
     font-family:font-family: 'Lobster', cursive;
     }
 
@@ -86,7 +86,6 @@ export default function Home() {
       font-size: 1.5rem;
       font-weight:400;
       align-self:center;
-      margin-bottom:2rem;
       margin-left:2rem
     }
 

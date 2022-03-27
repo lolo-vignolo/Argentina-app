@@ -67,7 +67,7 @@ const Welcome = () => {
                     border-color:white
                 }
                 
-                @media (min-width: 620px){
+                @media (min-width: 500px){
 
 
                     .div-h1{
@@ -82,7 +82,7 @@ const Welcome = () => {
 
                     h2{
                     font-size:2rem;
-                    margin-top:-5rem
+                    
                     }
 
                     button{

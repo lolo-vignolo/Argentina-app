@@ -1,10 +1,15 @@
 
 import {signIn} from "next-auth/react";
 import { useRouter } from "next/router";
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
+import {
+    Alert,
+    AlertIcon,
+  } from '@chakra-ui/react'
 
 
 import newUser from './newUser';
+
 
 const AuthForm = () => {
 
@@ -14,7 +19,23 @@ const AuthForm = () => {
     const router = useRouter()
     const [isLogin, setIsLogin] = useState(true)
 
-    const [msgError , setMsgError] = useState(false)
+    const [status , setStatus] = useState()
+
+
+    useEffect(() => {
+        if (status) {
+          const timer = setTimeout(() => {
+            setStatus(null);
+            
+          }, 3000);
+    
+          // este clear es para que no queden en lacola timeOuts
+          return () => clearTimeout(timer);
+        }
+      }, [status]);
+
+
+
 
     const handleEmail = (e) =>{
         let emailValue = e.target.value
@@ -42,9 +63,10 @@ const AuthForm = () => {
             })
 
             if(!result.error){
+                setStatus("loginSucces")
                 router.replace("/home")
             }else{
-                setMsgError(!msgError)     
+                setStatus("error")     
             }
             
 
@@ -52,13 +74,17 @@ const AuthForm = () => {
 
             try{
                const result = await newUser(email, password)
+               
+               setStatus("succes")
                console.log(result);
 
             }catch(err){
                 console.log(err);
+                setStatus("longer")
             }
         }
     }
+    
 
     return (
         <>
@@ -87,10 +113,33 @@ const AuthForm = () => {
                 </form>           
             </div>
             
+            {status === "error" &&
+                <Alert status='error'>
+                    <AlertIcon />
+                    Check your email or your password! 
+                </Alert>                     
+            } 
+            {status === "longer" &&
+                <Alert status='warning'>
+                    <AlertIcon />
+                    Yout password musb be 6 characters long at leas or this account already exist!
+                </Alert>                     
+            } 
+            {status === "succes" &&
+            <Alert status='success'>
+                <AlertIcon />
+                New account was created
+                </Alert>                    
+            } 
+            {status === "loginSucces" &&
+            <Alert status='success'>
+                <AlertIcon />
+                succesful Login!
+                </Alert>                   
+            } 
+
+
         </section>
-            {msgError &&
-                ""
-            }  
 
         <style jsx>{`
         
