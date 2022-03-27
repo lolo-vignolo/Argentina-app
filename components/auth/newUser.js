@@ -1,6 +1,9 @@
+import { useRouter } from "next/router";
 
 
 async function newUser ( email, password) {
+
+    const router = useRouter()
     
     const response = await fetch("/api/auth/signup", {
         method:"POST",
@@ -15,6 +18,8 @@ async function newUser ( email, password) {
 
     if(!response.ok){
         throw Error(data.message || "Something went wrong")
+    }else{
+        router.replace("/home")
     }
     return data;
 }

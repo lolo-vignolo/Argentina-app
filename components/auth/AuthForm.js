@@ -74,8 +74,8 @@ const AuthForm = () => {
 
             try{
                const result = await newUser(email, password)
-               
-               setStatus("succes")
+               setStatus("succes");
+               router.replace("/home")
                console.log(result);
 
             }catch(err){
