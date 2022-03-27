@@ -10,7 +10,7 @@ const Map = () => {
 
         <style jsx>{`
             .img{
-                border-radius: 15px !   important ;
+                border-radius: 15px !important;
             }
     
         `}

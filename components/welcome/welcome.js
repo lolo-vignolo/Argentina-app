@@ -71,30 +71,29 @@ const Welcome = () => {
 
 
                     .div-h1{
-                    width:58%;
+                    width:45%;
                     }
 
                     h1{
-                    font-size:3.5rem;
+                    font-size:2.5rem;
                     font-weight: 700;
                     color:white;
                     }
 
                     h2{
-                    font-size:2rem;
+                    font-size:1rem;
                     
                     }
 
                     button{
-                    font-size:2.5rem;
-                    margin-top: -2rem;
+                    font-size:1.5rem;
                     padding:3px 10px ;
                     }
 
                     .img-class{
                     border-radius:15px;
-                    weight: 350px;
-                    height:500px;
+                    weight: 250px;
+                    height:350px;
                     border:solid;
                     border-color:white
                     }
